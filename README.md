@@ -1,4 +1,4 @@
-# Stream Mint
+# Stream Mint Superfluid Project
 
 This project demonstrates a basic Superfluid Super App that mints you an NFT if you're streaming at or above a desired rate to it.
 
