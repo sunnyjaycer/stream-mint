@@ -110,6 +110,12 @@ before(async function () {
 
 describe("sending flows", async function () {
 
+    it("Check Token URI", async () => {
+
+      assert.equal(await streamMint.tokenURI("2"), "ipfs://QmPH2Nc9R1v3AXZmTB16WU1CsXmuKFEKvS6EwBhEnybCni", "Alice wasn't minted an NFT");
+
+    })
+
     it("Case #1 - Alice sends an sufficient flow, gets NFT", async () => {
 
       const createFlowOperation = daix.createFlow({

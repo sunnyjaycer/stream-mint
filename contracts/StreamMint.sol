@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-3.0
-
 pragma solidity 0.8.18;
 
 import { SuperAppBaseFlow } from "@superfluid-finance/ethereum-contracts/contracts/apps/SuperAppBaseFlow.sol";
@@ -48,6 +47,16 @@ contract StreamMint is SuperAppBaseFlow, ERC721 {
     ///@param superToken the token being streamed into the contract
     function isAcceptedSuperToken(ISuperToken superToken) public view override returns (bool) {
         return superToken == acceptedToken;
+    }
+
+    /// @notice Overrides tokenURI
+    function tokenURI(uint256 /*tokenId*/)
+        public
+        view
+        override(ERC721)
+        returns (string memory)
+    {
+        return "ipfs://QmPH2Nc9R1v3AXZmTB16WU1CsXmuKFEKvS6EwBhEnybCni";
     }
 
     // ---------------------------------------------------------------------------------------------
